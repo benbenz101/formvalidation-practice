@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./media/epumplogo.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style/bootstrap.min.css" />
+    <title>epump signin</title>
+
+    <script>
+      function validateForm() {
+        if (document.forms["signinForm"]["Name"].value == "") {
+          // alert( "Please provide your name!" );
+          // document.myForm.Name.focus() ;
+          document.getElementById("namealert").innerHTML = "*input your name*";
+          return false;
+        }
+        if (document.forms["signinForm"]["Address"].value == "") {
+          // alert( "Please provide your name!" );
+          // document.myForm.Name.focus() ;
+          document.getElementById("addressalert").innerHTML =
+            "*input your address*";
+          return false;
+        }
+        if (document.forms["signinForm"]["Phone"].value == "") {
+          // alert( "Please provide your name!" );
+          // document.myForm.Name.focus() ;
+          document.getElementById("phonealert").innerHTML =
+            "*input your phone number*";
+          return false;
+        }
+        if (document.forms["signinForm"]["Email"].value == "") {
+          // alert( "Please provide your name!" );
+          // document.myForm.Name.focus() ;
+          document.getElementById("emailalert").innerHTML =
+            "*input your email*";
+          return false;
+        }
+        if (document.forms["signinForm"]["Password1"].value == "") {
+          // alert( "Please provide your name!" );
+          // document.myForm.Name.focus() ;
+          document.getElementById("password1alert").innerHTML =
+            "*input your password*";
+          return false;
+        }
+        if (document.forms["signinForm"]["Password2"].value == "") {
+          // alert( "Please provide your name!" );
+          // document.myForm.Name.focus() ;
+          document.getElementById("password2alert").innerHTML =
+            "*input your password*";
+          return false;
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="mt-5 mb-5 p-5 signup bg-light container w-50">
+      <!-- epump image -->
+      <div class="d-flex justify-content-evenly mb-4">
+        <img src="./media/epumplogo.svg" alt="" width="" height="" />
+      </div>
+      <div class="">
+        <h5 class="text-center">SIGN-UP HERE</h5>
+        <!-- form proper -->
+        <form
+          name="signinForm"
+          action=""
+          onsubmit="return validateForm()"
+          method="post"
+        >
+          <div class="form-floating mb-3 mt-5">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingInput"
+              placeholder="name"
+              name="Name"
+            />
+            <label for="floatingInput">Name</label>
+            <p id="namealert"></p>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="floatingInput"
+              placeholder="address"
+              name="Address"
+            />
+            <label for="floatingInput">Address</label>
+            <p id="addressalert"></p>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="number"
+              class="form-control"
+              id="floatingInput"
+              placeholder="Phone number"
+              name="Phone"
+            />
+            <label for="floatingInput">Phone Number</label>
+            <p id="phonealert"></p>
+          </div>
+          <div class="form-floating mb-3">
+            <input
+              type="email"
+              class="form-control"
+              id="floatingInput"
+              placeholder="name@example.com"
+              name="Email"
+            />
+            <label for="floatingInput">Email</label>
+            <p id="emailalert"></p>
+          </div>
+          <div class="row g-2">
+            <div class="col-md form-floating mb-3">
+              <input
+                type="password"
+                class="form-control"
+                id="floatingPassword"
+                placeholder="Password"
+                name="Password1"
+              />
+              <label for="floatingPassword">Password</label>
+              <p id="password1alert"></p>
+            </div>
+            <div class="col-md form-floating">
+              <input
+                type="password"
+                class="form-control"
+                id="floatingPassword"
+                placeholder="Password"
+                name="Password2"
+              />
+              <label for="floatingPassword">Confirm Password</label>
+              <p id="password2alert"></p>
+            </div>
+          </div>
+          <!-- button -->
+          <div class="mt-5 d-flex justify-content-evenly">
+            <button type="submit" class="rounded-pill">SIGN UP</button>
+          </div>
+        </form>
+      </div>
+      <!-- caveat -->
+      <div class="mt-5">
+        <p class="text-center">
+          If you have an account,
+          <span><a href="./signin.html">sign-in here</a></span>
+        </p>
+      </div>
+    </div>
+
+    <script src="./script/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

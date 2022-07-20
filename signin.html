@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style/bootstrap.min.css" />
+    <title>epump signin</title>
+
+    <script>
+        function validateForm() {
+            const validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+if( document.forms["signinForm"]["Email"].value == "" ) {
+            // alert( "Please provide your name!" );
+            // document.myForm.Name.focus() ;
+            document.getElementById("emailalert").innerHTML = "*input your email*"
+            return false;
+         }
+// if( document.forms["signinForm"]["Email"].valuematch(validRegex)) {
+//             // alert( "Please provide your name!" );
+//             // document.myForm.Name.focus() ;
+//             document.getElementById("emailalert").innerHTML = "*valid email*"
+//             return false;
+//          }
+if( document.forms["signinForm"]["password"].value == "" ) {
+            // alert( "Please provide your name!" );
+            // document.myForm.Name.focus() ;
+            document.getElementById("passwordalert").innerHTML = "*input your password*"
+            return false;
+         }
+
+        }
+
+
+// function validateForm(input) {
+
+//   var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+//   if (input["signinForm"]["Email"].value.match(validRegex)) {
+
+//     document.getElementById("emailalert").innerHTML = "*valid email*"
+
+//     // document.form1.text1.focus();
+
+//     return true;
+
+//   } else {
+
+//     document.getElementById("emailalert").innerHTML = "*input your email*"
+
+//     // document.form1.text1.focus();
+
+//     return false;
+
+//   }
+
+// }
+    </script>
+
+  </head>
+
+  <body>
+    <div class="mt-5 mb-5 p-5 signin bg-light container w-50">
+        <!-- epump image -->
+      <div class="d-flex justify-content-evenly mb-4">
+        <img src="./media/epumplogo.svg" alt=""  width="" height=""/>
+      </div>
+      <div class="">
+        <h5 class="text-center">SIGN-IN HERE</h5>
+        <!-- form proper -->
+        <form name="signinForm" action="" onsubmit="return validateForm()" method="post">
+          <div class="form-floating mb-3 mt-5">
+            <input
+              type="email"
+              class="form-control"
+              id="floatingInput"
+              placeholder="name@example.com" name="Email"
+            />
+            <label for="floatingInput">Email</label>
+            <p id="emailalert"></p>
+          </div>
+          <div class="form-floating">
+            <input
+              type="password"
+              class="form-control"
+              id="floatingPassword"
+              placeholder="Password" name="password"
+            />
+            <label for="floatingPassword">Password</label>
+            <p id="passwordalert" ></p>
+          </div>
+          <a href="/forget.html"> <p class="text-end">Forgot Password?</p></a>
+         
+        </div>
+        <!-- button -->
+        <div class="mt-5 d-flex justify-content-evenly">
+          <button type="submit" class="rounded-pill">SIGN IN</button>
+        </div>
+        </form>
+      <!-- caveat -->
+      <div class="mt-5">
+        <p class="text-center">
+          If you don't have an account yet,
+          <span><a href="./signup.html">sign-up here</a></span>
+        </p>
+      </div>
+    </div>
+
+    <script src="./style.js"></script>
+    <!-- <script src="./script/bootstrap.bundle.min.js"></script> -->
+  </body>
+</html>

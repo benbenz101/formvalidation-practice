@@ -1,0 +1,39 @@
+body {
+  background-image: url("./media/bcgedit.jpg");
+}
+
+.signup {
+  border-radius: 20px;
+}
+
+.signin {
+  border-radius: 20px;
+}
+
+button {
+  background-color: blueviolet;
+  width: 60%;
+}
+
+#emailalert {
+  color: red;
+}
+
+#passwordalert {
+  color: red;
+}
+#password1alert {
+  color: red;
+}
+#password2alert {
+  color: red;
+}
+#namealert {
+  color: red;
+}
+#addressalert {
+  color: red;
+}
+#phonealert {
+  color: red;
+}

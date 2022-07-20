@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style/bootstrap.min.css" />
+    <title>epump forget</title>
+
+    <script>
+        function validateForm() {
+  let x = document.forms["signinForm"]["Email"].value;
+  if (x == "") {
+      document.getElementById("emailalert").innerHTML = "*input your email*"
+    // alert("email must be filled out");
+    return false;
+  }
+} 
+    </script>
+
+  </head>
+
+  <body>
+    <div class="mt-5 mb-5 p-5 signin bg-light container w-50">
+        <!-- epump image -->
+      <div class="d-flex justify-content-evenly mb-4">
+        <img src="./media/epumplogo.svg" alt=""  width="" height=""/>
+      </div>
+      <div class="">
+        <h5 class="text-center">FORGOTTEN YOUR PASSWORD?</h5>
+        <!-- form proper -->
+        <form name="signinForm" action="" onsubmit="return validateForm()" method="post">
+          <div class="form-floating mb-3 mt-5">
+            <input
+              type="email"
+              class="form-control"
+              id="floatingInput"
+              placeholder="name@example.com" name="Email"
+            />
+            <label for="floatingInput">Email</label>
+            <p id="emailalert"></p>
+          </div>
+          
+         
+        </div>
+        <!-- button -->
+        <div class="mt-5 d-flex justify-content-evenly">
+          <button type="submit" class="rounded-pill">RESET</button>
+        </div>
+        </form>
+      <!-- caveat -->
+      <div class="mt-5">
+        <p class="text-center">
+          If you don't have an account yet,
+          <span><a href="./signup.html">sign-up here</a></span>
+        </p>
+      </div>
+    </div>
+
+    <script src="./script/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
